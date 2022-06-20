@@ -1,1 +1,8 @@
-gp = component.list("gpu")() while true do  component.invoke(gp,"set",1,1,"this computer is dead good luck!") end
+local gpu = component.proxy(component.list("gpu")())
+local fss = component.list("filesystem")
+
+while true do
+    for i=1,#fss do
+        gpu.set(1,i,i.."."..fss[i])
+    end
+end
