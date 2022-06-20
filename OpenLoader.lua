@@ -11,7 +11,7 @@ end
 while true do
     for i=1,#fss do
         local fs=component.proxy(fss[i])
-        local files = fs.list("\\")
+        local files = fs.list("")
         for k,v in files do
             local b_file=""
             if v==settings.boot_file then 
